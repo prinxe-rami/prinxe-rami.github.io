@@ -1,1 +1,481 @@
+/* STYLE SECTIONING TAGS */
 
+/* Question: Can I add alt text to background images? How?*/
+
+/*Things I still need to do:
+-add alt text to background imgs if possible
+-add extension(maybe just upload to github)
+-final testing and debugging*/
+
+
+* { /* Reset the space of the webpage */
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+ background-image: url("assets/texture.jpg"); /*changes background image and sets the default text to align in the center*/
+  text-align:center;
+}
+
+/* On multiple pages */
+
+h1 {
+  background-image: url("assets/paint-supplies.jpg"); /*This is used on the tops of all 3 pages, it makes an image the background for the header*/
+  background-size:cover;
+  background-position:center;
+  padding-top:100px;
+  padding-bottom:75px;
+  font-size:75pt;
+  color:#FFD802;
+  font-family: Garamond, serif;
+  font-variant:small-caps;
+}
+.highlight-container, .highlight { /*From here to line 53, I used this code to highlight my header text*/
+  position: relative;
+}
+
+.highlight-container { 
+  display: inline-block;
+}
+.highlight-container:before {
+  content: " ";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  background: #002357;
+  border-style:solid;
+  border-width:8pt;
+  border-color:#F3F7FA;
+}
+
+.column-text{
+  display:flex;
+}
+
+
+
+/* Nav Bar:D */
+  ul {
+  list-style-type:none;
+  background-color: #002357; /*wow a nav bar!*/
+  overflow:hidden;
+  padding:1em;
+  margin-bottom:10px;
+}
+li {
+  display:inline; /*makes it horizontal*/
+  font-variant:small-caps;
+}
+li a {
+  text-decoration:none;
+  color:#F3F7FA;
+  font-size:2em;
+  padding:1em;
+}
+li a:hover {
+  background-color:#024D8C; /*make sit change color when the mouse hovers over it*/
+}
+
+
+/*Home Page!*/
+/*Text*/
+.home-p{ /*big bold message, short and concise*/
+  font-size:30pt;
+  text-align:left;
+  border-left:solid;
+  border-color:#FFD802;
+  border-width:12pt;
+  margin:0pt 5pt 0pt 5pt;
+  background-color:#fff3ad;
+  font-family: Arial Black, Arial;
+  padding-left:0.5em;
+  padding-right:0.5em;
+  margin-bottom:3em;
+}
+
+.home-section{ /*for the break in the page with new section header*/
+  background-image:url("assets/watercolors.jpg");
+  background-size:cover;
+  background-position:center;
+  padding-top:75px;
+  padding-bottom:75px;
+  font-family: Arial Black, Arial;
+  font-size:35pt;
+  color:#FFD802;
+  margin-top:2em;
+}
+
+#home-bottom{ /*for the very bottom image*/
+  background-image:url("assets/watercolors.jpg");
+  background-size:cover;
+  background-position:center;
+  padding-top:15px;
+  padding-bottom:15px;
+  font-family: Arial Black, Arial;
+  font-size:1pt;
+  color:#F3F7FA;
+}
+
+
+
+
+/*images*/
+#home-img{
+  height:500px;
+  width:auto;
+  border-radius:30%;
+}
+
+.container { /*from here to 166, overlays text onto home-img and lowers opacity*/
+  position: relative;
+  text-align: center;
+  color: black;
+  font-size:65pt;
+  font-family: Arial Black, Arial;
+}
+.top-left {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  background-color:#FFD802;
+  opacity:0.5;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 80px;
+  background-color:#FFD802;
+  opacity:0.5;
+}
+/*text generator*/
+#inputBtn { /*stylizes my textgen button!*/
+  background-color: #002357;
+  border-radius:50%;
+  color: #FFD802;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25pt;
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+#textGen{ /*stylizes my text generator text*/
+  font-family: Arial Black, Arial;
+  font-size:20pt;
+  padding:15px 100px 15px 100px;
+  margin:50px 50px 50px 25px;
+  background-color:#002357;
+  color:#FFD802;
+  line-height:1;
+}
+
+#message{ /*stylizes the message that displays when btn is clicked*/
+  font-family:Arial Black, Arial;
+  font-size:30pt;
+  padding:15px 100px 15px 100px;
+  margin:25px 50px 50px 50px;
+  background-color:#002357;
+  color:#FFD802;
+  margin-top:50px;
+}
+
+
+/*Learn More Page*/
+/*Text*/
+.eco-artists-section { /*for the "page break" and section header*/
+  background-image:url("assets/paint-brushes.jpg");
+  background-size:cover;
+  background-position:center;
+  padding-top:75px;
+  padding-bottom:75px;
+  margin-top:30px;
+  margin-bottom:30px;
+  font-family: Arial Black, Arial;
+  font-size:35pt;
+  color:#FFD802;
+}
+
+#whatIs{ /*for my header at top of learn page*/
+  font-family: Garamond, Serif;
+  font-size: 35pt;
+  background-color:#024D8C;
+  border: 10pt solid #002357;
+  border-radius:50%;
+  color:#FFD802;
+  padding:30px;
+  margin-top:2.5em;
+  margin-bottom:1em;
+  margin-left:1em;
+  margin-right:1em;
+}
+
+#itIs{ /*answers questions from header with /style/*/
+  font-family: Garamond, Serif;
+  line-height: 1;
+  font-size:20pt;
+  border-left:solid;
+  border-color:#FFD802;
+  border-width:12pt;
+  background-color:#fff3ad;
+  text-align:left;
+  padding:10px;
+}
+
+.three-column-text:after { /*for my three column text in artists section*/
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.artist-name{
+  font-family: Arial Black, Arial;
+  font-size:20pt;
+  border: 3pt dotted #FFD802;
+  padding:15px;
+  margin:10px 25px 25px 25px;
+  color: #002357;
+}
+
+#r-des{ /*for description of rachel mishael*/
+  font-family: Garamond, Serif;
+  font-size:16pt;
+  background-color: #fff3ad;
+  color:#002357;
+  padding:15px 20px 15px 10px;
+  border-left: 10pt solid #FFD802;
+  text-align:left;
+}
+
+#m-des{ /*for description of michael price*/
+  font-family: Garamond, Serif;
+  font-size:16pt;
+  background-color: #fff3ad;
+  color:#002357;
+  padding:15px 10px 15px 20px;
+  border-right: 10pt solid #FFD802;
+  text-align:right;
+}
+
+
+.art-des{ /*for title sof art pieces*/
+  font-family: Garamond, Serif;
+  font-size:14pt;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+#resources{
+  font-family: Garamond, serif;
+  font-size: 25pt;
+  background-color: #024D8C;
+  color: #FFD802;
+  padding:20px;
+  margin-bottom:30px;
+}
+
+#websites{
+  font-family: Garamond, serif;
+  font-size: 25pt;
+  background-color: #024D8C;
+  color: #FFD802;
+  border-right: 10pt solid #002357;
+  padding:20px;
+  margin-bottom:65px;
+}
+
+.List{
+  font-family: Arial Black, Arial;
+  font-size: 18pt;
+  color: #002357;
+  padding:30px;
+  line-height:1.5;
+}
+
+#lrnFiller{
+  font-family: Garamond, serif;
+  font-size: 25pt;
+  background-color: #024D8C;
+  color: #024D8C;
+  border-left: 10pt solid #002357;
+  margin-left:50px;
+  padding:20px;
+  margin-top:30px;
+}
+
+#eco-artists-section-btm {
+  background-image:url("assets/paint-brushes.jpg");
+  background-size:cover;
+  background-position:center;
+  padding-top:15px;
+  padding-bottom:15px;
+  margin-top:30px;
+  font-family: Arial Black, Arial;
+  font-size:1pt;
+  color:#ffffff;
+}
+/*Images*/
+
+.artists{
+  float:left;
+  width:33.33%
+}
+
+#mp-art{
+  transform:rotate(90deg);
+  height:auto;
+  width:500px;
+  border:5pt solid #FFD802;
+  margin-top:125px;
+}
+#rm-art{
+  height:500px;
+  width:auto;
+  border:5pt solid #FFD802;
+  margin-top:25px;
+}
+
+/*video*/
+#video{
+  text-align:center;
+  margin:50px 50px 20px 50px;
+  border:5pt solid #FFD802;
+}
+
+
+/*Take Action Page*/
+/*text*/
+.how-section {
+  background-image:url("assets/sepia-paint-supplies.jpg");
+  background-size:cover;
+  background-position:center;
+  padding-top:75px;
+  padding-bottom:75px;
+  margin-top:35px;
+  margin-bottom:20px;
+  font-family: Arial Black, Arial;
+  font-size:35pt;
+  color:#FFD802;
+}
+
+
+#how-action{
+  font-family:Arial Black, Arial;
+  font-size: 50pt;
+  margin-top:40px;
+  margin-bottom:25px;
+  text-shadow: 2px 2px 8px #FFD802;
+}
+
+#act-optOne{
+  font-family: Arial Black, Arial;
+  font-size:25pt;
+  background-color: #fff3ad;
+  border-left: 10pt solid #FFD802;
+  margin:20px 30px 20px 30px;
+  padding: 10px 5px 10px 12px;
+  text-align:left;
+}
+#act-optTwo{
+  font-family: Arial Black, Arial;
+  font-size:25pt;
+  background-color: #fff3ad;
+  border-right: 10pt solid #FFD802;
+  margin:20px 30px 20px 30px;
+  padding: 10px 12px 10px 5px;
+  text-align:right;
+}
+
+.how-p{
+  font-family: Garamond, Serif;
+  font-size: 24pt;
+  background-color: #fff3ad;
+  border-left: 10pt solid #FFD802;
+  padding:15px 10px 15px 8px;
+  text-align:left;
+  margin: 0px 45px 0px 45px;
+}
+
+#aexcel{
+  font-family: Garamond, Serif;
+  font-size:35pt;
+  font-variant:small-caps;
+  text-align:right;
+  margin-right:25px;
+}
+
+#aexcel-des{
+  font-family: Arial Black, Arial;
+  font-size:20pt;
+  background-color: #fff3ad;
+  border-right: 10pt solid #FFD802;
+  margin:2px 25px 25px 25px;
+  text-align:right;
+  padding:10px 8px 25px 12px;
+}
+
+#basf{
+  font-family: Garamond, Serif;
+  font-size:35pt;
+  font-variant:small-caps;
+  text-align:left;
+  margin-left:25px;
+  margin-top:25px;
+}
+
+#basf-des{
+  font-family: Arial Black, Arial;
+  font-size:20pt;
+  background-color: #fff3ad;
+  border-left: 10pt solid #FFD802;
+  margin:2px 25px 100px 25px;
+  text-align:left;
+  padding:10px 12px 10px 8px;
+}
+
+#how-section-btm{
+  background-image:url("assets/sepia-paint-supplies.jpg");
+  background-size:cover;
+  background-position:center;
+  padding-top:15px;
+  padding-bottom:15px;
+  margin-top:30px;
+  font-family: Arial Black, Arial;
+  font-size:1pt;
+  color:#ffffff;
+}
+
+.fakeBtn{
+  font-size:10pt;
+}
+.fakeUl{
+  padding:0px;
+}
+/*img*/
+
+.actionImg{
+  border-radius:50%;
+  height:500px;
+  width:auto;
+  border:5pt solid #FFD802;
+  margin: 30px 75px 50px 75px;
+}
+
+#road{
+  height:325px;
+  width:auto;
+  border-radius:45%;
+  border:5pt solid #FFD802;
+  margin:10px 10px 50px 10px;
+}
+
+#car{
+  height:325px;
+  width:auto;
+  border-radius:45%;
+  border:5pt solid #FFD802;
+  margin:100px 10px 10px 10px;
+}
