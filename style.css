@@ -14,7 +14,7 @@
 }
 
 body {
- background-image: url("assets/texture.jpg"); /*changes background image and sets the default text to align in the center*/
+ background-image: url("texture.jpg"); /*changes background image and sets the default text to align in the center*/
   text-align:center;
 }
 
